@@ -1,4 +1,5 @@
 .idea
-.idea/vcs.xml
-/node_modules
+node_modules
 .DS_Store
+dist
+*.log
