@@ -3,13 +3,13 @@ html(lang="en")
     head
         title= pageTitle
         link(href='/css/main.css', rel='stylesheet')
-        script(type='text/javascript').
-            if (foo) bar(1 + 5)
 
     body
         include components/header
-        h1 Pug - node template engine
-        #container.col
+
+        h1 Pug - Test
+
+        div
             if youAreUsingPug
                 p You are amazing
             else
@@ -17,3 +17,6 @@ html(lang="en")
             p.
                 Pug is a terse and simple templating language with a
                 strong focus on performance and powerful features.
+
+        script.
+            if (true) console.log(1 + 5)
