@@ -11,7 +11,7 @@ const
 const config = {
     entry: [
         path.resolve(src, 'index.js'),
-        path.resolve(src, './css/main.css')
+        path.resolve(src, 'styles.css')
     ],
 
     output: {
@@ -61,11 +61,11 @@ const config = {
 
         new HtmlWebpackPlugin({
             filetype: 'pug',
-            template:'./src/index.pug'
+            template: './src/index.pug'
         }),
 
         new ExtractTextPlugin({
-            filename: "main.css"
+            filename: "[name].css"
         })
     ]
 };
