@@ -1,8 +1,7 @@
 const
     path = require('path'),
     CleanWebpackPlugin = require('clean-webpack-plugin'),
-    HtmlWebpackPlugin = require('html-webpack-plugin'),
-    HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
+    HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const
     src = path.resolve(__dirname, 'src'),
@@ -21,13 +20,18 @@ const config = {
     },
 
     devServer: {
-        contentBase: path.join(__dirname, 'dist'),
+        contentBase: path.join(__dirname, 'src'),
         host: '127.0.0.1',
-        port: 9000
+        port: 8085
     },
 
     module: {
-        rules: []
+        rules: [
+            {
+                test: /\.pug$/,
+                use:['raw-loader', 'pug-html-loader']
+            }
+        ]
     },
 
     plugins: [
@@ -37,14 +41,9 @@ const config = {
         }),
 
         new HtmlWebpackPlugin({
-            filetype: 'pug'
-        }),
-
-        new HtmlWebpackPlugin({
-            filename: 'index.pug'
-        }),
-
-        new HtmlWebpackPugPlugin()
+            filetype: 'pug',
+            template:'./src/index.pug'
+        })
     ]
 };
 
