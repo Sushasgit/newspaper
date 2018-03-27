@@ -11,7 +11,7 @@ const
 const config = {
     entry: [
         path.resolve(src, 'index.js'),
-        path.resolve(src, './css/main.css')
+        path.resolve(src, 'styles.css')
     ],
 
     output: {
@@ -33,15 +33,19 @@ const config = {
         rules: [
             {
                 test: /\.pug$/,
-                use:['raw-loader', 'pug-html-loader']
+                use: ['raw-loader', 'pug-html-loader']
             },
 
             {
                 test: /\.css$/i,
-                use:  ExtractTextPlugin.extract({
-                    fallback: "style-loader",
+                use: ExtractTextPlugin.extract({
                     use: [
-                        { loader: 'css-loader', options: { importLoaders: 1 } },
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                importLoaders: 1
+                            }
+                        },
                         'postcss-loader'
                     ]
                 })
@@ -57,11 +61,11 @@ const config = {
 
         new HtmlWebpackPlugin({
             filetype: 'pug',
-            template:'./src/index.pug'
+            template: './src/index.pug'
         }),
 
         new ExtractTextPlugin({
-            filename: "main.css"
+            filename: "[name].css"
         })
     ]
 };

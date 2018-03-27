@@ -1,25 +1,20 @@
 doctype html
 html(lang="en")
     head
-        title= pageTitle
-        link(href='/css/main.css', rel='stylesheet')
-        script(type='text/javascript').
-            if (foo) bar(1 + 5)
+        meta(charset="utf-8")
+        title Newspaper
 
     body
         include components/header
-        h1 Pug - node template engine
-        #container.grid
-            div(class='grid__item') 1
-            div(class='grid__item') 2
-            div(class='grid__item span-3') 3
-            div(class='grid__item') 4
-            div(class='grid__item span-2') 5
-            div(class='grid__item') 6
-            div(class='grid__item') 7
-            div(class='grid__item') 8
-            div(class='grid__item') 9
-            div(class='grid__item span-2') 7
-            div(class='grid__item') 8
-            div(class='grid__item span-2') 9
-        a(href="http://google.com") Basic link
+
+        h1 Pug - Test
+
+        div
+            p You are amazing
+
+            p.
+                Pug is a terse and simple templating language with a
+                strong focus on performance and powerful features.
+
+        script.
+            if (true) console.log(1 + 5)

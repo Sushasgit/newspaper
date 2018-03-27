@@ -1,5 +1,4 @@
 :root {
-    --headlineColor: #1C4FC7;
-    --linkColor:#1C4FC7;
-    --LinkHoverColor:#799CEC;
+    --fontColor: #333;
+    --bgColor: #fefefe;
 }
