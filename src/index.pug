@@ -7,14 +7,8 @@ html(lang="en")
     body
         include components/header
 
-        h1 Pug - Test
-
-        div
-            p You are amazing
-
-            p.
-                Pug is a terse and simple templating language with a
-                strong focus on performance and powerful features.
+        div(class="container")
+            include components/card/card
 
         script.
             if (true) console.log(1 + 5)
