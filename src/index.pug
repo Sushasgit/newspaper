@@ -2,13 +2,12 @@ doctype html
 html(lang="en")
     head
         meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
         title Newspaper
 
     body
-        include components/header
-
-        div(class="container")
-            include components/card/card
+        div
+            include components/grid/grid
 
         script.
             if (true) console.log(1 + 5)

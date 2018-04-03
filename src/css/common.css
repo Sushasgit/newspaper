@@ -1,5 +1,11 @@
 body {
+    background-color: var(--less-then-white, #fefefe);
     font: 100% / 1.5 system-ui;
-    color: var(--fontColor);
-    background-color: var(--bgColor);
+    color: var(--less-then-black, #333);
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font: inherit;
 }
