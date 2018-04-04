@@ -1,6 +1,7 @@
 body {
-    background-color: var(--less-then-white, #fefefe);
+    margin: 0;
     font: 100% / 1.5 system-ui;
+    background-color: var(--less-then-white, #fefefe);
     color: var(--less-then-black, #333);
 }
 
@@ -8,4 +9,19 @@ button {
     border: none;
     cursor: pointer;
     font: inherit;
+}
+
+.container {
+    position: absolute;
+    padding: .5em;
+    width: calc(100% - 1em);
+    height: calc(100% - 1em);
+
+    @media (max-width: 1280px) {
+        width: calc(1280px - 1em);
+    }
+
+    @media (max-height: 800px) {
+        height: calc(800px - 1em);
+    }
 }
