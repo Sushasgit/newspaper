@@ -8,7 +8,7 @@
         background-color: var(--light-gray, #eee);
 
         &--1 {
-             grid-column: span 5;
+            grid-column: span 5;
         }
 
         &--3,
